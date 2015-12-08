@@ -8,3 +8,6 @@ the plugin cannot be upload, still not figure out. have to install them all agai
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 after that, open vim, using "PluginInstall" to add the plugin
+
+for vim-airline font problem
+firstly, add git clone https://github.com/powerline/fonts.git ～/.vim/font
