@@ -47,6 +47,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 map <silent> <leader>ee :e ~/.vim/vimrc<cr>
+map <silent> <leader>el :source ~/.vim/vimrc<cr>
+
 
 map <A-1> :buffer 1<CR>
 map <A-2> :buffer 2<CR>
