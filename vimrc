@@ -2,6 +2,7 @@ set nocompatible
 filetype off
 
 set t_Co=256
+colorscheme railscasts
 syntax on
 
 set number
@@ -42,6 +43,7 @@ nmap <F5> :make<CR>
 
 au! bufwritepost .vimrc source ~/.vim/vimrc<cr>
 
+filetype plugin indent on
 
 if has ('gui_running')	
   set rtp+=~/.vim/bundle/vundle/
@@ -51,8 +53,6 @@ if has ('gui_running')
   Plugin 'bling/vim-airline'
   Bundle 'scrooloose/nerdtree'
   Bundle 'klen/python-mode'
-
-  filetype plugin indent on
 
   augroup vimrc_autocmds
     au FileType py highlight Excess ctermbg=DarkGrey guibg=Black
@@ -108,7 +108,6 @@ if has ('gui_running')
 
   set autochdir
 
-	colorscheme railscasts
 	let g:airline_theme='solarized'
 	set background=dark
 	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
