@@ -63,7 +63,7 @@ hi Identifier guifg=#CFCFFF gui=NONE
 " #if, #else, #endif
 
 " case, begin, do, for, if, unless, while, until, else
-hi Statement guifg=#CC7733 gui=NONE
+hi Statement guifg=#BB3333 gui=NONE
 hi! link PreProc Statement
 hi! link PreCondit Statement
 
