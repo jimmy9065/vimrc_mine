@@ -53,11 +53,18 @@ if has ('gui_running')
   Plugin 'bling/vim-airline'
   Bundle 'scrooloose/nerdtree'
   Bundle 'klen/python-mode'
+  Bundle 'abudden/taghighlight-automirror'
+
+  Bundle 'a.vim'
+  Bundle 'DfrankUtil'
+  Bundle 'vimprj'
+  Bundle 'easycolour'
 
   augroup vimrc_autocmds
     au FileType py highlight Excess ctermbg=DarkGrey guibg=Black
     au Filetype py match Excess /\%120v.*/
     au FileType py set nowrap 
+    au FileType c  map <silent> <leader>u :UpdateTypesFile<CR>
   augroup END
              
   autocmd VimEnter * NERDTree
