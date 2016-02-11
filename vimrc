@@ -65,6 +65,9 @@ if has ('gui_running')
     au Filetype py match Excess /\%120v.*/
     au FileType py set nowrap 
     au FileType c  map <silent> <leader>u :UpdateTypesFile<CR>
+    au FileType cpp  map <silent> <leader>u :UpdateTypesFile<CR>
+    au FileType cpp colorscheme desert_thl
+    au FileType cpp 
   augroup END
              
   autocmd VimEnter * NERDTree
@@ -118,4 +121,11 @@ if has ('gui_running')
 	let g:airline_theme='solarized'
 	set background=dark
 	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+
+  "Taghighlight
+   if ! exists('g:TagHighlightSettings')
+          let g:TagHighlightSettings = {}
+   endif 
+   let g:TagHighlightSettings['IncludeLocals'] = 'True'
+
 endif
