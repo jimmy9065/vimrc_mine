@@ -17,6 +17,7 @@ for vim-airline font problem
 
 for ycm:
   make sure you have these package: automake gcc gcc-c++ kernel-devel cmake python-devel
+  
   Compiling YCM:
   cd ~/.vim/bundle/YouCompleteMe
   ./install.py --clang-completer
