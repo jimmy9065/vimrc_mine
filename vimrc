@@ -54,6 +54,7 @@ if has ('gui_running')
   Bundle 'scrooloose/nerdtree'
   Bundle 'klen/python-mode'
   Bundle 'abudden/taghighlight-automirror'
+  Bundle 'Valloric/YouCompleteMe'
 
   Bundle 'a.vim'
   Bundle 'DfrankUtil'
@@ -67,7 +68,6 @@ if has ('gui_running')
     au FileType c  map <silent> <leader>u :UpdateTypesFile<CR>
     au FileType cpp  map <silent> <leader>u :UpdateTypesFile<CR>
     au FileType cpp colorscheme desert_thl
-    au FileType cpp 
   augroup END
              
   autocmd VimEnter * NERDTree
@@ -127,5 +127,7 @@ if has ('gui_running')
           let g:TagHighlightSettings = {}
    endif 
    let g:TagHighlightSettings['IncludeLocals'] = 'True'
+
+   let g:ycm_confirm_extra_conf = 0
 
 endif
