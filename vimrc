@@ -55,6 +55,9 @@ if has ('gui_running')
   Bundle 'klen/python-mode'
   Bundle 'abudden/taghighlight-automirror'
   Bundle 'Valloric/YouCompleteMe'
+  Bundle 'godlygeek/tabular'
+  Bundle 'plasticboy/vim-markdown'
+  Bundle 'iamcco/markdown-preview.vim'
 
   Bundle 'a.vim'
   Bundle 'DfrankUtil'
@@ -70,8 +73,10 @@ if has ('gui_running')
     au FileType cpp colorscheme desert_thl
   augroup END
              
+  "for nerdtree
   autocmd VimEnter * NERDTree
   autocmd VimEnter * wincmd p
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 
   map <F3> :NERDTreeToggle<CR>
 
@@ -130,4 +135,13 @@ if has ('gui_running')
 
    let g:ycm_confirm_extra_conf = 0
 
+   "vim-markdown
+    let g:vim_markdown_folding_disabled = 1
+    let g:vim_markdown_mat = 1
+    let g:vim_markdown_no_default_key_mappings = 1 
+    
+   "vim-instant-markdown
+
 endif
+
+
