@@ -71,7 +71,7 @@ if has ('gui_running')
     au FileType c  map <silent> <leader>u :UpdateTypesFile<CR>
     au FileType cpp  map <silent> <leader>u :UpdateTypesFile<CR>
     au FileType cpp colorscheme desert_thl
-    au FileType markdown map <Leader>p :! google-chrome "%:p"<CR><CR>
+    au FileType markdown map <Leader>p :! google-chrome "%:p" &<CR><CR>
     "last line for opening a chrome and display that md file
   augroup END
              
