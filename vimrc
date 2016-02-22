@@ -50,7 +50,6 @@ if has ('gui_running')
   call vundle#rc()
 
   Bundle 'gmarik/vundle'
-  Plugin 'bling/vim-airline'
   Bundle 'scrooloose/nerdtree'
   Bundle 'klen/python-mode'
   Bundle 'abudden/taghighlight-automirror'
@@ -58,6 +57,8 @@ if has ('gui_running')
   Bundle 'godlygeek/tabular'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'iamcco/markdown-preview.vim'
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
 
   Bundle 'a.vim'
   Bundle 'DfrankUtil'
