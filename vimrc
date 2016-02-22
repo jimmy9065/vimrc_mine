@@ -90,6 +90,11 @@ if has ('gui_running')
   set laststatus=2
   let g:airline_powerline_fonts = 1
 
+  "airline-themes
+	let g:airline_theme='solarized'
+	set background=dark
+	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+
   "enable tabline
   let g:airline#extensions#tabline#enabled = 1
   " set left separator
@@ -127,11 +132,6 @@ if has ('gui_running')
   let g:pymode_rope_autoimport = 0
 
   set autochdir
-
-  "airline-themes
-	let g:airline_theme='solarized'
-	set background=dark
-	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
 
   "Taghighlight
    if ! exists('g:TagHighlightSettings')
