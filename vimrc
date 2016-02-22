@@ -78,7 +78,7 @@ if has ('gui_running')
   "for nerdtree
   autocmd VimEnter * NERDTree
   autocmd VimEnter * wincmd p
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
   map <F3> :NERDTreeToggle<CR>
 
