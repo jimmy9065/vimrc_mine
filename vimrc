@@ -46,6 +46,9 @@ au! bufwritepost .vimrc source ~/.vim/vimrc<cr>
 filetype plugin indent on
 
 if has ('gui_running')	
+
+  set guioptions-=T
+
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
 
@@ -83,9 +86,8 @@ if has ('gui_running')
 
   map <F3> :NERDTreeToggle<CR>
 
-  "aireline
+  "for aireline
   set laststatus=2
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h20
   let g:airline_powerline_fonts = 1
 
   "enable tabline
@@ -126,6 +128,7 @@ if has ('gui_running')
 
   set autochdir
 
+  "airline-themes
 	let g:airline_theme='solarized'
 	set background=dark
 	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
