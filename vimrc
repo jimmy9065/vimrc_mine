@@ -55,8 +55,9 @@ if has ('gui_running')
   Bundle 'gmarik/vundle'
   Bundle 'scrooloose/nerdtree'
   Bundle 'klen/python-mode'
-  Bundle 'abudden/taghighlight-automirror'
   Bundle 'Valloric/YouCompleteMe'
+  Bundle 'SirVer/ultisnips'
+  Plugin 'honza/vim-snippets'
   Bundle 'godlygeek/tabular'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'iamcco/markdown-preview.vim'
@@ -64,8 +65,8 @@ if has ('gui_running')
   Plugin 'vim-airline/vim-airline-themes'
 
   Bundle 'a.vim'
-  Bundle 'DfrankUtil'
-  Bundle 'vimprj'
+  "Bundle 'DfrankUtil'
+  "Bundle 'vimprj'
   Bundle 'easycolour'
 
   augroup vimrc_autocmds
@@ -76,6 +77,7 @@ if has ('gui_running')
     au FileType cpp  map <silent> <leader>u :UpdateTypesFile<CR>
     au FileType cpp colorscheme desert_thl
     au FileType markdown map <Leader>p :! google-chrome "%:p" &<CR><CR>
+    au FileType markdown nmap <F5> :MarkdownPreview<CR>
     "last line for opening a chrome and display that md file
   augroup END
              
@@ -139,12 +141,23 @@ if has ('gui_running')
    endif 
    let g:TagHighlightSettings['IncludeLocals'] = 'True'
 
+   "youcompleteme
    let g:ycm_confirm_extra_conf = 0
+   let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+   let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+   let g:SuperTabDefaultCompletionType = '<C-n>'
+
+   "Ultisnips
+   let g:UltiSnipsExpandTrigger="<CR>"
+   let g:UltiSnipsJumpForwardTrigger="<CR>"
+   let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+   let g:UltiSnipsEditSplit="vertical"
 
    "vim-markdown
     let g:vim_markdown_folding_disabled = 1
     let g:vim_markdown_mat = 1
     let g:vim_markdown_no_default_key_mappings = 1 
+    
     
    "vim-instant-markdown
 
