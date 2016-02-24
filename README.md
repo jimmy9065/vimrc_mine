@@ -34,18 +34,18 @@ Some Plugins need to be configured.
 the block above may no longer necessary.
 
 #####for [UltiSnipts](https://github.com/SirVer/ultisnips):  
-  shortcuts is \<CR\>  
+  shortcuts: \<CR\>  
   Remark:\<CR\> in insert mode does not work any more. Actually, with UltiSnipts \<CR\> may no longer be necessary in insert mode.  
   Also used [their template snippts](https://github.com/honza/vim-snippets). It's awesome!!!!
 
 #####for [ycm](https://github.com/Valloric/YouCompleteMe):
   make sure you have these package: automake gcc gcc-c++ kernel-devel cmake python-devel
   Compiling YCM:  
-  '''
+  ```
   cd ~/.vim/bundle/YouCompleteMe  
   ./install.py --clang-completer
-  '''
-  shortcut is \<C-N\>
-  for every c-family pro. you need to write a configure file called ".ycm_extra_conf.py" under that folder.  
-  There is a template file for that configure file that you may find in the YCM folder.
+  ```
+  Shortcut: \<C-N\>  
+  For c-family project, you need to write a configure file called ".ycm_extra_conf.py" under that folder.
+  There is a template file which you may find it in the YCM folder(I don't remember where).  
   Sometimes update YCM may require re-compile the plugin. There will be notify information.
