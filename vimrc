@@ -148,8 +148,8 @@ if has ('gui_running')
    let g:SuperTabDefaultCompletionType = '<C-n>'
 
    "Ultisnips
-   let g:UltiSnipsExpandTrigger="<CR>"
-   let g:UltiSnipsJumpForwardTrigger="<CR>"
+   let g:UltiSnipsExpandTrigger="<Tab>"
+   let g:UltiSnipsJumpForwardTrigger="<Tab>"
    let g:UltiSnipsJumpBackwardTrigger="<c-k>"
    let g:UltiSnipsEditSplit="vertical"
 
