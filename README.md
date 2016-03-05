@@ -34,8 +34,8 @@ Some Plugins need to be configured.
 the block above may no longer necessary.
 
 #####for [UltiSnipts](https://github.com/SirVer/ultisnips):  
-  shortcuts: \<CR\>  
-  Remark:\<CR\> in insert mode does not work any more. Actually, with UltiSnipts \<CR\> may no longer be necessary in insert mode.  
+  shortcuts: \<TAB\>  
+  Remark:\<TAB\> could be replaced by <SHIFT->>
   Also used [their template snippts](https://github.com/honza/vim-snippets). It's awesome!!!!
 
 #####for [ycm](https://github.com/Valloric/YouCompleteMe):
