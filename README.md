@@ -8,9 +8,10 @@ git clone https://github.com/jimmy9065/vimrc_mine.git ~/.vim
 the vimrc file is in ~/.vim folder.  
 the plugin file is not in this repo, So you need to install them all again. 
 
-###2.install the vundle  
+###2.install the vundle
+```
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
+```
 after that, open Gvim, using "PluginInstall" to add the plugin
 
 ###3.Some configuration
