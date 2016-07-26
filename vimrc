@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
 
+set lines=35 columns=80
 set t_Co=256
 colorscheme railscasts
 syntax on
@@ -63,6 +64,7 @@ if has ('gui_running')
   Bundle 'iamcco/markdown-preview.vim'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
+  Plugin 'peterhoeg/vim-qml.git'
 
   Bundle 'a.vim'
   "Bundle 'DfrankUtil'
@@ -70,6 +72,7 @@ if has ('gui_running')
   Bundle 'easycolour'
 
   augroup vimrc_autocmds
+    au FileType qml set ts=4
     au FileType py highlight Excess ctermbg=DarkGrey guibg=Black
     au Filetype py match Excess /\%120v.*/
     au FileType py set nowrap 
