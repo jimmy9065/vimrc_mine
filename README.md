@@ -2,9 +2,16 @@
 
 ###1.clone the vimrc file.  
 For linux user, type this commandline in terminal
+ssh version(recommended):
+```
+git clone git@github.com:jimmy9065/vimrc_mine.git ~/.vim
+```
+
+http version:
 ```
 git clone https://github.com/jimmy9065/vimrc_mine.git ~/.vim
 ```
+
 the vimrc file is in ~/.vim folder.  
 the plugin file is not in this repo, So you need to install them all again. 
 
