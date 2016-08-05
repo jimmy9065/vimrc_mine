@@ -40,6 +40,8 @@ Some Plugins need to be configured.
   In the end, if the arrow still not show, you may need to change the font of gvim. 
 ***
 the block above may no longer necessary.
+***
+for vim-ariline to show correctly under vim, chose Droid Sams Mono Regular 11 as terminal font.
 
 #####for [UltiSnipts](https://github.com/SirVer/ultisnips):  
   shortcuts: \<TAB\>  

@@ -47,8 +47,8 @@ au! bufwritepost .vimrc source ~/.vim/vimrc<cr>
 filetype plugin indent on
 
 if has ('gui_running')	
-
   set guioptions-=T
+endif
 
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
@@ -95,10 +95,12 @@ if has ('gui_running')
   set laststatus=2
   let g:airline_powerline_fonts = 1
 
+if has ('gui_running')	
   "airline-themes
 	let g:airline_theme='solarized'
 	set background=dark
 	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+endif
 
   "enable tabline
   let g:airline#extensions#tabline#enabled = 1
@@ -164,6 +166,6 @@ if has ('gui_running')
     
    "vim-instant-markdown
 
-endif
+"endif
 
 
