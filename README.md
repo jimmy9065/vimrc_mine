@@ -42,6 +42,12 @@ In order to show v-a correctly under vim(in a terminal), set Droid Sams Mono Reg
   cd ~/.vim/bundle/YouCompleteMe  
   ./install.py --clang-completer
   ```
+  For arch:
+  install clang first.
+  then 
+  ```
+  ./install.py --clang-completer --system-libclang
+  ```
   Shortcut: \<C-N\>  
   For c-family project, you need to write a configure file called ".ycm_extra_conf.py" under that folder.
   There is a template file which you may find it in the YCM folder(I don't remember where).  
