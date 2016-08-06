@@ -3,7 +3,13 @@ filetype off
 
 set lines=35 columns=80
 set t_Co=256
-colorscheme railscasts
+
+if has ('gui_running')	
+  colorscheme railscasts
+else
+  colorscheme cake16
+endif
+
 syntax on
 
 set number
@@ -29,15 +35,16 @@ nnoremap <C-H> <C-W><C-H>
 map <silent> <leader>ee :e ~/.vim/vimrc<cr>
 map <silent> <leader>el :source ~/.vim/vimrc<cr>
 
-
-map <A-1> :buffer 1<CR>
-map <A-2> :buffer 2<CR>
-map <A-3> :buffer 3<CR>
-map <A-4> :buffer 4<CR>
-map <A-5> :buffer 5<CR>
-map <A-6> :buffer 6<CR>
-map <A-7> :buffer 7<CR>
-nnoremap <A-q> :bd<CR>
+if has ('gui_running')	
+  nnoremap <A-1> :buffer 1<CR>
+  nnoremap <A-2> :buffer 2<CR>
+  nnoremap <A-3> :buffer 3<CR>
+  nnoremap <A-4> :buffer 4<CR>
+  nnoremap <A-5> :buffer 5<CR>
+  nnoremap <A-6> :buffer 6<CR>
+  nnoremap <A-7> :buffer 7<CR>
+  nnoremap <A-q> :bd<CR>
+endif
 
 nmap <F2> :w<CR>
 nmap <F5> :make<CR>
@@ -78,7 +85,7 @@ endif
     au FileType py set nowrap 
     au FileType c  map <silent> <leader>u :UpdateTypesFile<CR>
     au FileType cpp  map <silent> <leader>u :UpdateTypesFile<CR>
-    au FileType cpp colorscheme desert_thl
+    au FileType cpp if(has ('gui_running')) |colorscheme desert_thl|endif
     au FileType markdown map <Leader>p :! google-chrome "%:p" &<CR><CR>
     au FileType markdown nmap <F5> :MarkdownPreview<CR>
     "last line for opening a chrome and display that md file
@@ -97,9 +104,11 @@ endif
 
 if has ('gui_running')	
   "airline-themes
-	let g:airline_theme='solarized'
-	set background=dark
-	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+  let g:airline_theme='solarized'
+  set background=dark
+  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+else
+  let g:airline_theme='papercolor'
 endif
 
   "enable tabline
