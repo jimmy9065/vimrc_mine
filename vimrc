@@ -44,6 +44,7 @@ if has ('gui_running')
   nnoremap <A-6> :buffer 6<CR>
   nnoremap <A-7> :buffer 7<CR>
   nnoremap <A-q> :bd<CR>
+  inoremap <C-v> <ESC>"+P<CR>kA
 endif
 
 nmap <F2> :w<CR>
