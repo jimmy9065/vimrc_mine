@@ -78,6 +78,7 @@ if has ('gui_running')
     au FileType cpp colorscheme desert_thl
     au FileType markdown map <Leader>p :! google-chrome "%:p" &<CR><CR>
     au FileType markdown nmap <F5> :MarkdownPreview<CR>
+    au FileType tex :setlocal spell spelllang=en_us
     "last line for opening a chrome and display that md file
   augroup END
              
