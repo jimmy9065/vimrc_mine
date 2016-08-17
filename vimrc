@@ -1,8 +1,15 @@
 set nocompatible
 filetype off
 
+set lines=35 columns=80
 set t_Co=256
-colorscheme railscasts
+
+if has ('gui_running')	
+  colorscheme railscasts
+else
+  colorscheme cake16
+endif
+
 syntax on
 
 set number
@@ -28,15 +35,16 @@ nnoremap <C-H> <C-W><C-H>
 map <silent> <leader>ee :e ~/.vim/vimrc<cr>
 map <silent> <leader>el :source ~/.vim/vimrc<cr>
 
-
-map <A-1> :buffer 1<CR>
-map <A-2> :buffer 2<CR>
-map <A-3> :buffer 3<CR>
-map <A-4> :buffer 4<CR>
-map <A-5> :buffer 5<CR>
-map <A-6> :buffer 6<CR>
-map <A-7> :buffer 7<CR>
-nnoremap <A-q> :bd<CR>
+if has ('gui_running')	
+  nnoremap <A-1> :buffer 1<CR>
+  nnoremap <A-2> :buffer 2<CR>
+  nnoremap <A-3> :buffer 3<CR>
+  nnoremap <A-4> :buffer 4<CR>
+  nnoremap <A-5> :buffer 5<CR>
+  nnoremap <A-6> :buffer 6<CR>
+  nnoremap <A-7> :buffer 7<CR>
+  nnoremap <A-q> :bd<CR>
+endif
 
 nmap <F2> :w<CR>
 nmap <F5> :make<CR>
@@ -46,8 +54,8 @@ au! bufwritepost .vimrc source ~/.vim/vimrc<cr>
 filetype plugin indent on
 
 if has ('gui_running')	
-
   set guioptions-=T
+endif
 
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
@@ -63,6 +71,7 @@ if has ('gui_running')
   Bundle 'iamcco/markdown-preview.vim'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
+  Plugin 'peterhoeg/vim-qml.git'
 
   Bundle 'a.vim'
   "Bundle 'DfrankUtil'
@@ -70,12 +79,13 @@ if has ('gui_running')
   Bundle 'easycolour'
 
   augroup vimrc_autocmds
+    au FileType qml set ts=4
     au FileType py highlight Excess ctermbg=DarkGrey guibg=Black
     au Filetype py match Excess /\%120v.*/
     au FileType py set nowrap 
     au FileType c  map <silent> <leader>u :UpdateTypesFile<CR>
     au FileType cpp  map <silent> <leader>u :UpdateTypesFile<CR>
-    au FileType cpp colorscheme desert_thl
+    au FileType cpp if(has ('gui_running')) |colorscheme desert_thl|endif
     au FileType markdown map <Leader>p :! google-chrome "%:p" &<CR><CR>
     au FileType markdown nmap <F5> :MarkdownPreview<CR>
     au FileType tex :setlocal spell spelllang=en_us
@@ -93,10 +103,14 @@ if has ('gui_running')
   set laststatus=2
   let g:airline_powerline_fonts = 1
 
+if has ('gui_running')	
   "airline-themes
-	let g:airline_theme='solarized'
-	set background=dark
-	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+  let g:airline_theme='solarized'
+  set background=dark
+  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+else
+  let g:airline_theme='papercolor'
+endif
 
   "enable tabline
   let g:airline#extensions#tabline#enabled = 1
@@ -162,6 +176,6 @@ if has ('gui_running')
     
    "vim-instant-markdown
 
-endif
+"endif
 
 

@@ -25,13 +25,14 @@ let g:colors_name="cake16"
 set background=light
 
 " General Colors
-hi Normal       guifg=#774f38   guibg=#f7efdf   ctermfg=0      ctermbg=15        gui=none      cterm=none
-hi Comment      guifg=#878787   guibg=NONE      ctermfg=8      ctermbg=NONE      gui=none      cterm=none
-hi Constant     guifg=#b95942   guibg=NONE      ctermfg=1      ctermbg=NONE      gui=none      cterm=none
+hi Normal       guifg=#774f38   guibg=#f7efdf   ctermfg=0      ctermbg=254        gui=none      cterm=none
+"hi Normal       guifg=#774f38   guibg=#f7efdf   ctermfg=0      ctermbg=230        gui=none      cterm=none
+hi Comment      guifg=#878787   guibg=NONE      ctermfg=248      ctermbg=NONE      gui=none      cterm=italic
+hi Constant     guifg=#b95942   guibg=NONE      ctermfg=124      ctermbg=NONE      gui=none      cterm=none
 hi Identifier   guifg=#308444   guibg=NONE      ctermfg=2      ctermbg=NONE      gui=none      cterm=none
-hi Statement    guifg=#308090   guibg=NONE      ctermfg=6      ctermbg=NONE      gui=none      cterm=none
+hi Statement    guifg=#308090   guibg=NONE      ctermfg=136      ctermbg=NONE      gui=none      cterm=none
 hi PreProc      guifg=#308090   guibg=NONE      ctermfg=6      ctermbg=NONE      gui=none      cterm=none
-hi Type         guifg=#308444   guibg=NONE      ctermfg=2      ctermbg=NONE      gui=none      cterm=none
+hi Type         guifg=#308444   guibg=NONE      ctermfg=22      ctermbg=NONE      gui=none      cterm=none
 hi Special      guifg=#b95942   guibg=NONE      ctermfg=1      ctermbg=NONE      gui=none      cterm=none
 
 " Text Markup
@@ -46,15 +47,15 @@ hi Title        guifg=#b95942   guibg=NONE      ctermfg=1      ctermbg=NONE     
 " Text Selection
 hi CursorIM     guifg=bg        guibg=fg        ctermfg=bg     ctermbg=fg        gui=none      cterm=none
 hi CursorColumn guifg=NONE      guibg=#e4dccc   ctermfg=NONE   ctermbg=14        gui=none      cterm=none
-hi CursorLine   guifg=NONE      guibg=#e4dccc   ctermfg=NONE   ctermbg=14        gui=none      cterm=none
-hi Visual       guifg=bg        guibg=#82a3b3   ctermfg=bg     ctermbg=10        gui=none      cterm=none
+hi CursorLine   guifg=NONE      guibg=#e4dccc   ctermfg=NONE   ctermbg=252      gui=none      cterm=none
+hi Visual       guifg=bg        guibg=#82a3b3   ctermfg=bg     ctermbg=darkgreen gui=none      cterm=none
 hi VisualNOS    guifg=NONE      guibg=NONE      ctermfg=NONE   ctermbg=NONE      gui=underline cterm=underline
 hi IncSearch    guifg=bg        guibg=#82a3b3   ctermfg=bg     ctermbg=10        gui=none      cterm=none
-hi Search       guifg=bg        guibg=#c79747   ctermfg=bg     ctermbg=11        gui=none      cterm=none
+hi Search       guifg=bg        guibg=#c79747   ctermfg=black     ctermbg=11        gui=none      cterm=none
 
 " UI
 hi LineNr       guifg=#afafaf   guibg=bg        ctermfg=13     ctermbg=bg        gui=none      cterm=none
-hi CursorLineNr guifg=fg        guibg=#e4dccc   ctermfg=fg     ctermbg=14        gui=none      cterm=none
+hi CursorLineNr guifg=fg        guibg=#e4dccc   ctermfg=fg     ctermbg=grey        gui=none      cterm=none
 hi Pmenu        guifg=bg        guibg=#878787   ctermfg=bg     ctermbg=8         gui=none      cterm=none
 hi PmenuSel     guifg=bg        guibg=#82a3b3   ctermfg=bg     ctermbg=10        gui=none      cterm=none
 hi PMenuSbar    guifg=#878787   guibg=#878787   ctermfg=8      ctermbg=8         gui=none      cterm=none
