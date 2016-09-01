@@ -68,7 +68,6 @@ endif
   Plugin 'honza/vim-snippets'
   Bundle 'godlygeek/tabular'
   Bundle 'plasticboy/vim-markdown'
-  Bundle 'iamcco/markdown-preview.vim'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'peterhoeg/vim-qml.git'
@@ -169,7 +168,7 @@ endif
 
    "vim-markdown
     let g:vim_markdown_folding_disabled = 1
-    let g:vim_markdown_mat = 1
+    let g:vim_markdown_math = 1
     let g:vim_markdown_no_default_key_mappings = 1 
     
     
