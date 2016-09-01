@@ -44,6 +44,7 @@ if has ('gui_running')
   nnoremap <A-6> :buffer 6<CR>
   nnoremap <A-7> :buffer 7<CR>
   nnoremap <A-q> :bd<CR>
+  inoremap <C-v> <ESC>"+P<CR>kA
 endif
 
 nmap <F2> :w<CR>
@@ -87,6 +88,7 @@ endif
     au FileType cpp if(has ('gui_running')) |colorscheme desert_thl|endif
     au FileType markdown map <Leader>p :! google-chrome "%:p" &<CR><CR>
     au FileType markdown nmap <F5> :MarkdownPreview<CR>
+    au FileType tex :setlocal spell spelllang=en_us
     "last line for opening a chrome and display that md file
   augroup END
              
