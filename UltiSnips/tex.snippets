@@ -1,15 +1,29 @@
 #PREAMBLE
 #notes
 snippet notes "create new notes"
-\documentclass[OPTIONS]{Notes}
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath,amsthm,amsfonts}
 
-\title{${1:TITLE}}
-\subject{${2:SUBJECT}}
-\author{${Yanzhi Liu}}
-\date{${5:DD}}{${6:MM}}{${7:YYYY}}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
 
 \begin{document}
-${8}
+\vspace*{-4.4cm}
+\begin{center}
+  \Large{${1:Title}} \\\
+  \large{${2:no.}}\\\
+  \normalsize{Yanzhi Liu}\\\
+  \today
+\end{center}
+  ${3}
 \end{document}
 endsnippet
  
