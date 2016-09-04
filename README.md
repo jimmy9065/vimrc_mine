@@ -53,3 +53,13 @@ In order to show v-a correctly under vim(in a terminal), set Droid Sams Mono Reg
   There is a template file which you may find it in the YCM folder(I don't remember where).  
   Sometimes update YCM may require re-compile the plugin. There will be notify information.
 ***
+####tips for latex
+  Creat .latexmkrc and input:
+  ```
+  $pdf_previewer = "start evince %O %S";
+  ```
+  Then use command:
+  ```
+  latexmk -pdf -pvc xxx.tex 
+  ```
+  to complie&display tex file.
