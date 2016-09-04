@@ -72,6 +72,7 @@ endif
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'peterhoeg/vim-qml.git'
+  Plugin 'scrooloose/syntastic'
 
   Bundle 'a.vim'
   "Bundle 'DfrankUtil'
@@ -89,7 +90,7 @@ endif
     au FileType markdown map <Leader>p :! google-chrome "%:p" &<CR><CR>
     au FileType markdown nmap <F5> :MarkdownPreview<CR>
     au FileType tex :setlocal spell spelllang=en_us
-    "last line for opening a chrome and display that md file
+    au FileType tex :let g:tex_indent_items=0
   augroup END
              
   "for nerdtree
@@ -175,6 +176,16 @@ endif
     
     
    "vim-instant-markdown
+
+   "Synatstic
+   set statusline+=%#warningmsg#
+   set statusline+=%{SyntasticStatuslineFlag()}
+   set statusline+=%*
+
+   let g:syntastic_always_populate_loc_list = 1
+   let g:syntastic_auto_loc_list = 1
+   let g:syntastic_check_on_open = 1
+   let g:syntastic_check_on_wq = 0
 
 "endif
 
