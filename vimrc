@@ -69,6 +69,7 @@ endif
   Plugin 'honza/vim-snippets'
   Bundle 'godlygeek/tabular'
   Bundle 'plasticboy/vim-markdown'
+  Bundle 'jistr/vim-nerdtree-tabs'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'peterhoeg/vim-qml.git'
@@ -96,9 +97,10 @@ endif
   "for nerdtree
   autocmd VimEnter * NERDTree
   autocmd VimEnter * wincmd p
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-  map <F3> :NERDTreeToggle<CR>
+  "map <F3> :NERDTreeToggle<CR>
+  map <F3> <plug>NERDTreeTabsToggle<CR>
 
   "for aireline
   set laststatus=2
