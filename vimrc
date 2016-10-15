@@ -44,7 +44,8 @@ if has ('gui_running')
   nnoremap <A-6> :buffer 6<CR>
   nnoremap <A-7> :buffer 7<CR>
   nnoremap <A-q> :bd<CR>
-  inoremap <C-v> <ESC>"+P<CR>kA
+  inoremap <C-v> <ESC>l"+P<CR>kA
+
 endif
 
 nmap <F2> :w<CR>
@@ -74,6 +75,7 @@ endif
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'peterhoeg/vim-qml.git'
   Plugin 'scrooloose/syntastic'
+  Plugin 'xuhdev/vim-latex-live-preview'
 
   Bundle 'a.vim'
   "Bundle 'DfrankUtil'
@@ -92,6 +94,7 @@ endif
     au FileType markdown nmap <F5> :MarkdownPreview<CR>
     au FileType tex :setlocal spell spelllang=en_us
     au FileType tex :let g:tex_indent_items=0
+    au FileType tex nmap <F5> :LLPStartPreview <CR>
   augroup END
              
   "for nerdtree
@@ -188,6 +191,9 @@ endif
    let g:syntastic_auto_loc_list = 1
    let g:syntastic_check_on_open = 1
    let g:syntastic_check_on_wq = 0
+
+   "vim-latex-preview
+   let g:livepreview_previewer = 'okular'
 
 "endif
 
