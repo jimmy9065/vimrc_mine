@@ -95,6 +95,7 @@ endif
     au FileType tex :setlocal spell spelllang=en_us
     au FileType tex :let g:tex_indent_items=0
     au FileType tex nmap <F5> :LLPStartPreview <CR>
+    au FileType tex :let g:syntastic_quiet_messages = { 'regex': 'User Regex' }
   augroup END
              
   "for nerdtree
@@ -164,6 +165,7 @@ endif
 
    "youcompleteme
    let g:ycm_confirm_extra_conf = 0
+   let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py' 
    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
    let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -193,7 +195,7 @@ endif
    let g:syntastic_check_on_wq = 0
 
    "vim-latex-preview
-   let g:livepreview_previewer = 'okular'
+   let g:livepreview_previewer = 'evince'
 
 "endif
 
