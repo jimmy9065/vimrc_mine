@@ -95,3 +95,23 @@ hi PmenuSel guifg=#000000 guibg=#A5C160 gui=NONE
 hi PMenuSbar guibg=#5A647E gui=NONE
 " thumb of the scrollbar in the popup
 hi PMenuThumb guibg=#AAAAAA gui=NONE
+" Python Syntax Highlighting
+" ==========================
+"  https://github.com/vim-python/python-syntax
+"  https://github.com/tweekmonster/django-plus.vim
+hi link pythonClass  Function
+hi link pythonCoding Comment
+hi link pythonRun    Comment
+hi link pythonOperator Operator
+hi pythonClassVar  guifg=#ABB6BA guibg=NONE gui=italic
+hi pythonClassParameters  guifg=#ABB6BA guibg=NONE gui=italic
+hi pythonVars  guifg=#ABB6BA guibg=NONE gui=italic
+hi pythonParameters  guifg=#ABB6BA guibg=NONE gui=italic
+hi pythonParam  guifg=#ABB6BA guibg=NONE gui=italic
+hi pythonStatement guifg=#996633 guibg=NONE gui=bold
+hi pythonDocTest   guifg=#557796 guibg=NONE gui=NONE
+hi pythonDocTest2  guifg=#557796 guibg=NONE gui=NONE
+hi link djangoQueryObject  Function
+hi link djangoModelField   Function
+hi link djangoModelsModule Normal
+hi link jediFat            Constant
