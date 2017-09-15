@@ -9,7 +9,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "railscasts"
+let g:colors_name = "cpp_color"
 
 " Colors
 " Brown        #BC9357
@@ -21,28 +21,30 @@ let g:colors_name = "railscasts"
 " Tan          #FFC66D
 " Red          #DA4938 
 
-hi Normal     guifg=#E6E1DC guibg=#232323
-hi Cursor     guibg=#FFFFFF
-hi CursorLine guibg=#333435
+" hi Normal     guifg=#E6E1DC guibg=#232323
+hi Normal     guifg=#D6D1DC guibg=#2f3339
+hi Cursor     guibg=#C0C0C0
+hi CursorLine guibg=#434445
 hi LineNr     guifg=#666666
 hi Visual     guibg=#5A647E
 hi Search     guifg=NONE    guibg=#131313  gui=NONE
 hi Folded     guifg=#F6F3E8 guibg=#444444  gui=NONE
 hi Directory  guifg=#A5C160 gui=NONE
 hi Error      guifg=#FFFFFF guibg=#990000
-hi MatchParen guifg=NONE    guibg=#FFC66D
-" #131313
-hi Title      guifg=#E6E1DC
+hi cOperator  guifg=#308989 guibg=NONE ctermfg=73
+hi cCustomBrack  guifg=#bbb3ff guibg=NONE
+"hi MatchParen guifg=NONE    guibg=#444444
 
 hi Comment    guifg=#BC9357 guibg=NONE     gui=italic
 hi! link Todo Comment
 
-hi String     guifg=#A5C160
-hi! link Number String
-hi! link rubyStringDelimiter String
+hi String     guifg=#A5A1AA
+
+"numbers
+hi Number guifg=#999900 gui=bold
 
 " nil, self, symbols
-hi Constant guifg=#6D9CBD
+hi Constant guifg=#cccc00 gui=bold
 
 " def, end, include, load, require, alias, super, yield, lambda, proc
 hi Define guifg=#CC7733 gui=NONE
@@ -61,29 +63,20 @@ hi Function guifg=#FFC66D gui=NONE
 hi Identifier guifg=#CFCFFF gui=NONE
 
 " #if, #else, #endif
-
 " case, begin, do, for, if, unless, while, until, else
-hi Statement guifg=#BB3333 gui=NONE
+hi Statement guifg=#a53333 gui=NONE
 hi! link PreProc Statement
 hi! link PreCondit Statement
 
 " SomeClassName
-hi Type guifg=#C050E0 gui=NONE
+hi Type guifg=#bbbbff gui=NONE
+hi Typedef guifg=#bbb3ff gui=bold
 
 " has_many, respond_to, params
 hi railsMethod guifg=#DA4938 gui=NONE
 
 hi DiffAdd guifg=#E6E1DC guibg=#144212
 hi DiffDelete guifg=#E6E1DC guibg=#660000
-
-hi xmlTag guifg=#E8BF6A
-hi! link xmlTagName  xmlTag
-hi! link xmlEndTag   xmlTag
-hi! link xmlArg      xmlTag
-hi! link htmlTag     xmlTag
-hi! link htmlTagName xmlTagName
-hi! link htmlEndTag  xmlEndTag
-hi! link htmlArg     xmlArg
 
 " Popup Menu
 " ----------
@@ -95,23 +88,3 @@ hi PmenuSel guifg=#000000 guibg=#A5C160 gui=NONE
 hi PMenuSbar guibg=#5A647E gui=NONE
 " thumb of the scrollbar in the popup
 hi PMenuThumb guibg=#AAAAAA gui=NONE
-" Python Syntax Highlighting
-" ==========================
-"  https://github.com/vim-python/python-syntax
-"  https://github.com/tweekmonster/django-plus.vim
-hi link pythonClass  Function
-hi link pythonCoding Comment
-hi link pythonRun    Comment
-hi link pythonOperator Operator
-hi pythonClassVar  guifg=#ABB6BA guibg=NONE gui=italic
-hi pythonClassParameters  guifg=#ABB6BA guibg=NONE gui=italic
-hi pythonVars  guifg=#ABB6BA guibg=NONE gui=italic
-hi pythonParameters  guifg=#ABB6BA guibg=NONE gui=italic
-hi pythonParam  guifg=#ABB6BA guibg=NONE gui=italic
-hi pythonStatement guifg=#996633 guibg=NONE gui=bold
-hi pythonDocTest   guifg=#557796 guibg=NONE gui=NONE
-hi pythonDocTest2  guifg=#557796 guibg=NONE gui=NONE
-hi link djangoQueryObject  Function
-hi link djangoModelField   Function
-hi link djangoModelsModule Normal
-hi link jediFat            Constant
