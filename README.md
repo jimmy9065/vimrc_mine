@@ -28,6 +28,10 @@ Some Plugins need to be configured.
 ###For [vim-ariline](https://github.com/vim-airline/vim-airline-themes): 
 In order to show v-a correctly under vim(in a terminal), set Droid Sams Mono Regular 11 as the terminal font.
 
+For air-line-theme synthwave:
+####1) clone this https://github.com/exitface/synthwave.vim
+####2) Copy synthwave.vim/autoload/airline/themes/synthwave.vim to ~/.vim/bundle/vim-airline-themes/autoload/airline/themes/
+
 ***
 ###for [UltiSnipts](https://github.com/SirVer/ultisnips):  
   shortcuts: \<TAB\>  
