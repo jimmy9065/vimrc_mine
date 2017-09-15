@@ -25,7 +25,7 @@ set hidden
 
 "map things
 let mapleader="`"
-imap jj <Esc>
+imap hh <Esc>
 set pastetoggle=<F9>
 map <silent> <leader>nn :bn<CR>
 map <C-tab> :bn<CR>
