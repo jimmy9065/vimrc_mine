@@ -31,10 +31,8 @@ flags = [
 'c++',
 '-isystem',
 '../BoostParts',
-'-isystem',
-# This path will only work on OS X, but extra paths that don't exist are not
-# harmful
-'/System/Library/Frameworks/Python.framework/Headers',
+'-isystem'
+'/usr/include/c++/6.3.1'
 '-isystem',
 '../llvm/include',
 '-isystem',
@@ -67,9 +65,9 @@ flags = [
 compilation_database_folder = ''
 
 if os.path.exists( compilation_database_folder ):
-  database = ycm_core.CompilationDatabase( compilation_database_folder )
+    database = ycm_core.CompilationDatabase( compilation_database_folder )
 else:
-  database = None
+    database = None
 
 SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ]
 

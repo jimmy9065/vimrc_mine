@@ -7,6 +7,7 @@ set background=dark
 
 if has ('gui_running')	
   colorscheme railscasts
+  set autoread
 else
   set termguicolors
   colorscheme synthwave
@@ -69,6 +70,7 @@ Bundle 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Bundle 'godlygeek/tabular'
 Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'djoshea/vim-autoread'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'peterhoeg/vim-qml.git'
@@ -149,6 +151,9 @@ let g:livepreview_previewer = 'evince'
 
 "delimitMate
 let delimitMate_expand_cr = 1
+
+"eclim
+let g:EclimCompletionMethod = 'omnifunc'
 
 filetype plugin indent on
 syntax on
