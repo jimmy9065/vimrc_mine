@@ -14,7 +14,7 @@ else
 endif
 
 set number
-set ts=2
+set ts=4
 set autoindent
 set expandtab
 set shiftwidth=2
@@ -36,6 +36,16 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 map <silent> <leader>ee :e ~/.vim/vimrc<cr>
 map <silent> <leader>el :source ~/.vim/vimrc<cr>
+
+"for vim-snipe
+map <leader><leader>f <Plug>(snipe-f)
+map <leader><leader>ge <Plug>(snipe-ge)
+nmap <leader><leader>x <Plug>(snipe-f-x)
+nmap <leader><leader>X <Plug>(snipe-F-x)
+nmap <leader><leader>r <Plug>(snipe-f-r)
+nmap <leader><leader>R <Plug>(snipe-F-r)
+nmap <leader><leader>a <Plug>(snipe-f-a)
+nmap <leader><leader>A <Plug>(snipe-F-a)
 
 if has ('gui_running')	
   nnoremap <A-1> :buffer 1<CR>
@@ -71,12 +81,14 @@ Plugin 'honza/vim-snippets'
 Bundle 'godlygeek/tabular'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'djoshea/vim-autoread'
+Bundle 'yangmillstheory/vim-snipe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'peterhoeg/vim-qml.git'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'Raimondi/delimitMate'
+Plugin 'Yggdroot/indentLine'
 
 Bundle 'a.vim'
 
@@ -90,7 +102,7 @@ map <F3> <plug>NERDTreeTabsToggle<CR>
 "for aireline
 set laststatus=2
 let g:airline_powerline_fonts=1
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 14
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 11
 
 if has ('gui_running')	
   "airline-themes
@@ -123,6 +135,7 @@ let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:ycm_always_populate_location_list = 1
+"let g:ycm_python_binary_path = 'python'
 
 "Ultisnips
 let g:UltiSnipsExpandTrigger="<Tab>"
@@ -155,5 +168,10 @@ let delimitMate_expand_cr = 1
 "eclim
 let g:EclimCompletionMethod = 'omnifunc'
 
+"indentLine
+"let g:indentLine_char='|'
+let g:indentLine_enable = 1
+
 filetype plugin indent on
+
 syntax on
