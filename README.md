@@ -58,7 +58,7 @@ For air-line-theme synthwave:
   Sometimes update YCM may require re-compile the plugin. There will be notify information.
 ***
 ####tips for latex
-  Creat .latexmkrc and input:
+  Create .latexmkrc and input:
   ```
   $pdf_previewer = "start evince %O %S";
   ```
